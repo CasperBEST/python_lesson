@@ -11,22 +11,22 @@ while i <= 1000:
 # и вычисляем сумму цифр этих чисел
 sum_total = 0
 for i in my_list:
-    sum = 0
-    while i != 0: # вычисляем сумму цифр каждого числа в списке
-        sum = sum + i % 10
+    sum_element_list = 0
+    while i != 0:  # вычисляем сумму цифр каждого числа в списке
+        sum_element_list = sum_element_list + i % 10
         i = i // 10
-    if sum % 7 == 0: # проверяем сумму цифр делением нацело на 7
-        sum_total = sum_total + sum
+    if sum_element_list % 7 == 0:  # проверяем сумму цифр делением нацело на 7
+        sum_total = sum_total + sum_element_list
 print('Сумма чисел из списка, сумма цифр которых делится нацело на 7, равна', sum_total)
 
 # К каждому элементу списка добавляем 17 и заного вычисляем сумму
 sum_total = 0
 for i in my_list:
     new_i = i + 17
-    sum = 0
-    while new_i != 0: # вычисляем сумму цифр каждого числа в списке
-        sum = sum + new_i % 10
+    sum_element_list = 0
+    while new_i != 0:  # вычисляем сумму цифр каждого числа в списке
+        sum_element_list = sum_element_list + new_i % 10
         new_i = new_i // 10
-    if sum % 7 == 0: # проверяем сумму цифр делением нацело на 7
-        sum_total = sum_total + sum
+    if sum_element_list % 7 == 0:  # проверяем сумму цифр делением нацело на 7
+        sum_total = sum_total + sum_element_list
 print('Сумма чисел из списка (+17), сумма цифр которых делится нацело на 7, равна', sum_total)
