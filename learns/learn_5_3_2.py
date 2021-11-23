@@ -18,6 +18,7 @@ for tupl in my_set:
     if name in tupl:
         i += 1
 print(i)
+
 names = {'Иван', 'Анна', 'Игорь', 'Иван', 'Сергей', 'Анна'}
 new_names = {'Андрей', 'Пётр', 'Иван', 'Сергей'}
 my_typle = (names, new_names)

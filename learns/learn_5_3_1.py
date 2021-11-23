@@ -14,7 +14,7 @@ for name in names:
         unique_names.discard(name)
         continue
     unique_names.add(name)
-print(unique_names)  # отличительное свойство множества
+#print(unique_names)  # отличительное свойство множества
 print([name for name in names if name in unique_names])
 
 names = {'Иван', 'Анна', 'Игорь', 'Иван', 'Сергей', 'Анна'}
