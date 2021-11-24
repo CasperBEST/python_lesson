@@ -37,9 +37,9 @@ print(sum(nums), getsizeof(nums), perf_counter() - start)
 
 start = perf_counter()
 # nums = (num for num in range(1, MAX_NUM + 1) if num % 7 ==0)
-# nums = (num if num % 7 == 0 else num ** 2 for num in range(1, MAX_NUM + 1))  # генератор
+nums = (num if num % 7 == 0 else num ** 2 for num in range(1, MAX_NUM + 1))  # генератор
 # nums = [num if num % 7 == 0 else num ** 2 for i in range(1, MAX_NUM + 1) for num in range(1, MAX_NUM + 1)]
 # nums = {num: i ** 2 for i in range(1, MAX_NUM + 1) for num in range(1, MAX_NUM + 1)}
-nums = {num for i in range(1, MAX_NUM + 1) for num in range(1, MAX_NUM + 1)}
-print(sum(nums), getsizeof(nums), perf_counter() - start)
-print(nums)
+# nums = {num for i in range(1, MAX_NUM + 1) for num in range(1, MAX_NUM + 1)}
+#print(sum(nums), getsizeof(nums), perf_counter() - start)
+print(*nums)
