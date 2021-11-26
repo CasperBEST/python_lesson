@@ -1,3 +1,5 @@
+# Работа с бинарными файлами
+
 import pickle
 import sys
 

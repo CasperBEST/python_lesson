@@ -13,14 +13,11 @@ for num in src:
 print('Через словарь ', [key for key in src_dict if src_dict[key] == 1])
 
 # Вариант решения через одно множество:
-src_set = set()  # создаем множество и заполняем его элементами, которые не повторяются в списке
-for num in src:
-    if num in src_set:
-        src_set.remove(num)
-        continue
-    src_set.add(num)
+repeat_list = src[:]
+for i in set(repeat_list):
+    repeat_list.remove(i)
 # выводим результат с сохранением порядка следования в исходом списке
-print('Одно множество', [num for num in src if num in src_set])
+print('Одно множество', [el for el in src if el not in repeat_list])
 
 # Вариант решения через два множества:
 unique_set = set()
