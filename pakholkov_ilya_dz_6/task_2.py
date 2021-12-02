@@ -16,12 +16,11 @@ with open('nginx_logs.txt', encoding='utf-8') as f:  # открываем фай
 
 addres_dict = {}  # Создаем словарь key = ip адрес, val = кол-во повторений key
 for el in my_list:
-    for i in el:
-        ip = el[0]
-        if ip in addres_dict:
-            addres_dict[ip] += 1
-        else:
-            addres_dict[ip] = 1
+    ip = el[0]
+    if ip in addres_dict:
+        addres_dict[ip] += 1
+    else:
+        addres_dict[ip] = 1
 max_val = max(addres_dict.values())  # максимальное значение ключа в словаре
 spamer = get_spam(addres_dict, max_val)  # адрес спамера
 print(f'IP адрес спамера - {spamer}\nОн отправил {max_val} запросов.')
